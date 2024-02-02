@@ -17,6 +17,7 @@ import Button from '@mui/material/Button';
 import Link from 'next/link';
 import { Container } from '@mui/material';
 import assest from '@/json/assest';
+import ThemeSwitch from '@/mui_theme/ThemeSwitch';
 
 interface Props {
     /**
@@ -124,6 +125,7 @@ export default function Header(props: Props) {
                                 About
                             </Button>
                         </Link>
+                        {/* <ThemeSwitch/> */}
                         {/* <Link href={'/product'}>
 
                             <Button sx={{

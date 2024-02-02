@@ -69,7 +69,8 @@ export default function Home() {
             ) :
               <>
                 <Grid item xs={6}>
-                  <img className={styles.abtimg} src={data?.data[0].image} alt="" width={520} height={400} style={{ borderRadius: '2%' }} />
+                <Link href={`/${data?.data[0]?.id}`}><img className={styles.abtimg} 
+                src={data?.data[0].image} alt="" width={520} height={400} style={{ borderRadius: '2%' }} /></Link>
                   <Link href={`/${data?.data[0]?.id}`} style={{ textDecoration: 'none' }}><Typography color={'blue'}>{data?.data[0].category.toUpperCase()}</Typography></Link>
                   <p style={{ color: 'black', fontSize: '24px', fontWeight: 'bold', marginRight: '50px' }}>{data?.data[0].title}</p>
                   <div style={{ display: 'flex' }}>
@@ -80,7 +81,8 @@ export default function Home() {
                   </div>
                 </Grid>
                 <Grid item xs={6}>
-                  <img src={data?.data[1].image} className={styles.abtimg} alt="" width={520} height={400} style={{ borderRadius: '2%' }} />
+                  <Link href={`/${data?.data[1]?.id}`}><img src={data?.data[1].image} className={styles.abtimg} alt="" 
+                  width={520} height={400} style={{ borderRadius: '2%' }} /></Link>
                   <Link href={`/${data?.data[1].id}`} style={{ textDecoration: 'none' }}><Typography color={'violet'}>{data?.data[1].category.toUpperCase()}</Typography></Link>
                   <p style={{ color: 'black', fontSize: '24px', fontWeight: 'bold', marginRight: '50px' }}>{data?.data[1].title}</p>
                   <div style={{ display: 'flex' }}>
@@ -136,7 +138,8 @@ export default function Home() {
                 return (
                   <>
                     <Grid item xs={4} key={index}>
-                      <img src={item.image} className={styles.abtimg} alt="" style={{ borderRadius: '10%' }} width={300} height={360} />
+                    <Link href={`/${item.id}`}><img src={item.image} className={styles.abtimg} alt="" 
+                    style={{ borderRadius: '10%' }} width={300} height={360} /></Link>
                       <div>
                         <div style={{ display: 'flex' }}>
                           <Link href={`/${item.id}`} style={{ textDecoration: 'none' }}><p style={{ color: 'blue' }}>{item.category.toUpperCase()}</p></Link>
